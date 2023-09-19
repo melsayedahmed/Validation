@@ -1,0 +1,62 @@
+:root {
+  --primary-color: rgb(111, 19, 231);
+  --error: rgb(209, 39, 39);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+div > input {
+  width: 400px;
+  max-width: 90%;
+  height: 30px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  padding: 0 10px;
+}
+
+div > input.error {
+  border: 1px solid var(--error);
+}
+
+div > button {
+  width: fit-content;
+  padding: 9px 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-inline: auto;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: var(--error);
+  margin-top: 5px;
+}
